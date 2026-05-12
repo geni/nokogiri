@@ -11,12 +11,12 @@ macro
   unicode   \\[0-9A-Fa-f]{1,6}(\r\n|[\s])?
 
   escape    {unicode}|\\[^\n\r\f0-9A-Fa-f]
-  nmchar    [_A-Za-z0-9-]|{nonascii}|{escape}
-  nmstart   [_A-Za-z]|{nonascii}|{escape}
+  nmchar    (?>[_A-Za-z0-9-]|{nonascii}|{escape})
+  nmstart   (?>[_A-Za-z]|{nonascii}|{escape})
   ident     -?({nmstart})({nmchar})*
   name      ({nmchar})+
-  string1   "([^\n\r\f"]|{nl}|{nonascii}|{escape})*(?<!\\)(?:\\{2})*"
-  string2   '([^\n\r\f']|{nl}|{nonascii}|{escape})*(?<!\\)(?:\\{2})*'
+  string1   "(?>[^\n\r\f"\\]|\\?{nl}|{nonascii}|{escape})*"
+  string2   '(?>[^\n\r\f'\\]|\\?{nl}|{nonascii}|{escape})*'
   string    {string1}|{string2}
 
 rule
