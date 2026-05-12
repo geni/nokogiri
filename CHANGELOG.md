@@ -4,6 +4,12 @@ Nokogiri follows [Semantic Versioning](https://semver.org/), please see the [REA
 
 ---
 
+## 1.15.8 / 2026-05-12
+
+### Security
+
+* Backported fix for regular expression backtracking in CSS selector tokenizer
+
 ## 1.15.7 / 2024-12-02
 
 ### Fixed
