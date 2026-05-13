@@ -226,11 +226,7 @@ def gnome_source
   # but whatever host is resolved on the github actions workers see an expired cert.
   #
   # See https://github.com/sparklemotion/nokogiri/runs/5266206403?check_suite_focus=true
-  if ENV["NOKOGIRI_USE_CANONICAL_GNOME_SOURCE"]
-    "https://download.gnome.org"
-  else
-    "https://muug.ca/mirror/gnome" # old reliable
-  end
+  "https://download.gnome.org"
 end
 
 LOCAL_PACKAGE_RESPONSE = Object.new
