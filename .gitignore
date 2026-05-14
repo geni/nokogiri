@@ -11,6 +11,7 @@
 /lib/nokogiri/**/nokogiri.so
 /lib/nokogiri/nokogiri.jar
 /pkg/
+/ports/
 /tmp/
 
 # code coverage
